@@ -4,7 +4,7 @@
 
 #video {
   position: absolute;
-  top: 0px;
+  top: 50px;
   left: 0px;
   min-width: 60%;
   min-height: 50%;
@@ -20,7 +20,7 @@
 
 #rect-canvas {
   position: absolute;
-  top: 0px;
+  top: 50px;
   left: 0px;
   z-index: 100;
 }
