@@ -1,6 +1,8 @@
 const audio = document.getElementById("audio");
 
 document.getElementById("start-camera").addEventListener("click", function () {
+  audio.load();
+
   // Webカメラの起動
   const video = document.getElementById("video");
   let contentWidth;
@@ -54,7 +56,6 @@ document.getElementById("start-camera").addEventListener("click", function () {
       // const music = new Audio("sound.mp3");
       // music.currentTime = 0;
       // music.play();
-      audio.load();
       audio.play();
     } else {
       console.log("QRcodeが見つかりません…", code);
