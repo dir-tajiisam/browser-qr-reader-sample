@@ -1,3 +1,5 @@
+const audio = document.getElementById("audio");
+
 document.getElementById("start-camera").addEventListener("click", function () {
   // Webカメラの起動
   const video = document.getElementById("video");
@@ -49,9 +51,11 @@ document.getElementById("start-camera").addEventListener("click", function () {
       drawRect(code.location);
       document.getElementById("qr-msg").textContent = `QRコード：${code.data}`;
       cancelAnimationFrame(id);
-      const music = new Audio("sound.mp3");
-      music.currentTime = 0;
-      music.play();
+      // const music = new Audio("sound.mp3");
+      // music.currentTime = 0;
+      // music.play();
+      audio.load();
+      audio.play();
     } else {
       console.log("QRcodeが見つかりません…", code);
       rectCtx.clearRect(0, 0, contentWidth, contentHeight);
